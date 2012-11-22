@@ -1,0 +1,40 @@
+{
+    "addressBook" : [
+        {
+            "name": "Giorgio",
+            "surname": "Chiellini",
+            "email": "chiello@example.com",
+            "office": "greeside"
+        },
+        {
+            "name": "Paul",
+            "surname": "Pogba",
+            "email": "cleveland@example.com",
+            "office": "greeside"
+        },
+        {
+            "name": "Arturo",
+            "surname": "Vidal",
+            "email": "vish@example.com",
+            "office": "templiers"
+        },
+        {
+            "name": "Andrea",
+            "surname": "Pirlo",
+            "email": "grady@example.com",
+            "office": "main"
+        },
+        {
+            "name": "Gigi",
+            "surname": "Buffon",
+            "email": "dusted@example.com",
+            "office": "main"
+        },
+        {
+            "name": "Andrea",
+            "surname": "Barzagli",
+            "email": "barza@example.com",
+            "office": "main"
+        }
+    ]
+}

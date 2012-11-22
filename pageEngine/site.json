@@ -1,0 +1,11 @@
+{
+    containerId : "portal-container",
+    appData : {},
+    navigation : "history",
+    commonModules : {
+        "search" : {
+            classpath : "addressBook.modules.SearchModuleCtrl",
+            priority : 2
+        }
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Copyright 2006-{year} Amadeus s.a.s. All rights reserved -->
+  <!-- No use of any portion hereof is authorised, except pursuant to a written agreement with Amadeus s.a.s. -->
+
+  <style>    
+    body {
+      padding: 0px;
+      margin: 0px;
+    }
+    #splashScreenContainer {
+      background: none repeat scroll 0 0 #DCDBDB;
+      height: 100%;
+      position: absolute;
+      vertical-align: middle;
+      width: 100%;
+      z-index: 100000;
+      opacity : 1;
+      -webkit-transition : opacity 0.40s linear;
+      -moz-transition : opacity 0.40s linear;
+      -o-transition : opacity 0.40s linear;
+      transition : opacity 0.40s linear;
+    }
+    #splashScreenContainer.invisible {
+      opacity : 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="splashScreenContainer"></div>
+  <div id="portal-container"></div>
+
+  <!-- load the framework entry point -->
+  <!--script type="text/javascript" src="/aria-templates/aria/aria-templates-1.1-SNAPSHOT.js"></script-->
+  <script type="text/javascript">
+    var version = "1.1-SNAPSHOT";
+    var devFiles = document.location.href.indexOf("dev=true") != -1;
+    if(devFiles) {
+      document.write('<scr' + 'ipt language="JavaScript" src="/aria-templates/dev/aria/aria-templates-' + version);document.write('.js"></scri' + 'pt>');
+    } else {
+      document.write('<scr' + 'ipt language="JavaScript" src="/aria-templates/aria/aria-templates-' + version);document.write('.js"></scri' + 'pt>');
+    }
+  </script>
+  <script type="text/javascript" src="/aria-templates/css/atdefskin-1.1-SNAPSHOT.js"></script>
+
+  <script>
+
+    if(devFiles) {
+      aria.core.DownloadMgr.updateRootMap({
+              "aria": {"*" : "../aria-templates/dev/"},
+              "addressBook": {"*" : Aria.rootFolderPath + "../../"}
+      });
+    } else {
+      aria.core.DownloadMgr.updateRootMap({
+              "addressBook": {"*" : Aria.rootFolderPath + "../"}
+      });
+    }
+
+    aria.core.AppEnvironment.setEnvironment({
+      defaultWidgetLibs : {
+        "aria" : "aria.widgets.AriaLib",
+        "embed" : "aria.embed.EmbedLib",
+        "html" : "aria.html.HtmlLibrary"
+      }
+    });
+
+    Aria.load({
+        classes: ["aria.pageEngine.PageEngine", "aria.pageEngine.pageProviders.BasePageProvider"],
+        oncomplete: function() {
+            var pageEngine = new aria.pageEngine.PageEngine();
+            pageEngine.start({
+                pageProvider : new aria.pageEngine.pageProviders.BasePageProvider({
+                	siteConfigLocation : "addressBook/pageEngine/site.json",
+                	pageBaseLocation : "addressBook/pages/",
+                  homePageId : "HOME"
+                })
+             });
+         }
+     });
+  </script>
+</body>
+</html>
