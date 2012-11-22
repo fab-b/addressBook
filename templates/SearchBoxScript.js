@@ -34,18 +34,20 @@ Aria.tplScriptDefinition({
         _searchOneWord : function (query) {
             var addressBook = this.data.addressBook.addressBook;
             var query = query.toLowerCase();
+            var tmp = [];
 
             for(var i=0; i < addressBook.length; i++) {
                 var contact = addressBook[i];
                 
                 for (var field in contact) {
-                    if (contact.hasOwnProperty(field)) {
+                    if ((!aria.utils.Json.isMetadata(field)) && (contact.hasOwnProperty(field))) {
                         if (contact[field].toLowerCase() == query) {
-                            this.data.results.push(contact);        
+                            tmp.push(contact);        
                         }
                     }
                 }
             }
+            this.$json.setValue(this.data, "results", tmp);
         },
 
         _searchMoreWords : function (query) {
@@ -58,7 +60,7 @@ Aria.tplScriptDefinition({
                 var contact = addressBook[i];
 
                 for (var field in contact) {
-                    if (contact.hasOwnProperty(field)) {
+                    if ((!aria.utils.Json.isMetadata(field)) && (contact.hasOwnProperty(field))) {
                         for (var j=0; j < words.length; j++) {
                             if (contact[field].toLowerCase() == words[j]) {
 
