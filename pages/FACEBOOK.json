@@ -1,0 +1,17 @@
+{
+    contents : {
+        placeholderContents : {
+        }
+    },
+    pageComposition : {
+        template : "addressBook.templates.MainLayout",
+        placeholders : {            
+            "applicationBox" : {
+                "template" : "addressBook.templates.FacebookResults",
+                "module" : "common:facebook"
+            }
+        }
+    },
+    pageId : "FACEBOOK",
+    url : "/addressBook/facebook"
+}

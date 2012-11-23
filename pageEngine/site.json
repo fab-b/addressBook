@@ -6,6 +6,10 @@
         "search" : {
             classpath : "addressBook.modules.ContactSearchController",
             priority : 2
+        },
+		"facebook" : {
+            classpath : "addressBook.modules.Facebook",
+            priority : 2
         }
     }
 }
