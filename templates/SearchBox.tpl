@@ -28,7 +28,7 @@
    	</div>
 
    	<div class="box-bottom center">
-   		<button type="button" class="search-button background-cyan" {on click {fn : "_searchClicked"}/}><h2>Search</h2></button>
+   		<button type="button" class="search-button" {on click {fn : "searchClicked"}/}><h2>Search</h2></button>
    	</div>
    </div>
 

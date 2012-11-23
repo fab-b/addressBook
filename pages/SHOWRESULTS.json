@@ -10,11 +10,11 @@
         template : "addressBook.templates.MainLayout",
         placeholders : {            
             "applicationBox" : {
-                "template" : "addressBook.templates.SearchBox",
+                "template" : "addressBook.templates.ResultsBox",
                 "module" : "common:search"
             }
         }
     },
-    padeId : "HOME",
-    url : "/addressBook/search"
+    padeId : "SHOWRESULTS",
+    url : "/addressBook/results"
 }

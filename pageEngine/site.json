@@ -1,10 +1,10 @@
 {
     containerId : "portal-container",
     appData : {},
-    navigation : "history",
+    navigation : "hash",
     commonModules : {
         "search" : {
-            classpath : "addressBook.modules.SearchModuleCtrl",
+            classpath : "addressBook.modules.ContactSearchController",
             priority : 2
         }
     }

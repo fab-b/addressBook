@@ -81,5 +81,10 @@
   		border: 1px solid #777;
   	}
 
+    .search-button:hover{
+      color:white;
+      background-color:#63E6F5;
+    }
+
   {/macro}
 {/CSSTemplate}

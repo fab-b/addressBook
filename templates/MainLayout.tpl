@@ -7,7 +7,7 @@
   {macro main()}
    <div class="container"> 
    	{@embed:Placeholder {
-    	name : "searchBox"
+    	name : "applicationBox"
     }/}
    </div>
   {/macro}
