@@ -7,13 +7,29 @@ Aria.tplScriptDefinition({
 
         navigateEnter : function () {
             if ((this.data.query !== undefined) && (this.data.query !== "")) { // ENTER
-                this.moduleCtrl.searchContact();
+                var button = this.$getElementById("searchButton");
+                var text = button.getChild(0);
+                text.classList.setClassName("hide");
+                button.classList.setClassName(button.classList.getClassName() + " loader");
+                aria.core.Timer.addCallback({
+                    fn : this._wait,
+                    scope : this,
+                    delay : 1500
+                });
             } 
         },
 
         searchClicked : function () {
             if ((this.data.query !== undefined) && (this.data.query !== "")) { // CLICK
-                this.moduleCtrl.searchContact();
+                var button = this.$getElementById("searchButton");
+                var text = button.getChild(0);
+                text.classList.setClassName("hide");
+                button.classList.setClassName(button.classList.getClassName() + " loader");
+                aria.core.Timer.addCallback({
+                    fn : this._wait,
+                    scope : this,
+                    delay : 3500
+                });
             }
         },
 
@@ -23,5 +39,9 @@ Aria.tplScriptDefinition({
                 this.$json.setValue(this.data, "query", this.textValue);    
             }
         },
+
+        _wait : function () {
+            this.moduleCtrl.searchContact();
+        }
     }
 });

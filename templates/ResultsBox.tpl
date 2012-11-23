@@ -1,5 +1,6 @@
 {Template {
-  $classpath : "addressBook.templates.ResultsBox",  
+  $classpath : "addressBook.templates.ResultsBox",
+  $hasScript : true,
   $css : ["addressBook.templates.ResultsBoxCSS"]
 }}
 
@@ -23,7 +24,36 @@
                   Location: ${contact.office}
                 </td>
                 <td class="social">
-
+                  <div class="icons">
+                    <div class="fb-box">
+                      {if contact.facebook}
+                        <a class="social-link-fb"></a>
+                      {else/}
+                        <img src="./templates/imgs/facebook16.png">
+                      {/if}
+                    </div>
+                    <div class="tw-box">
+                      {if contact.twitter}
+                        <a class="social-link-tw"></a>
+                      {else/}
+                        <img src="./templates/imgs/twitter16.png">
+                      {/if}
+                    </div>
+                    <div class="lin-box">
+                      {if contact.linkedin}
+                        <a class="social-link-lin"></a>
+                      {else/}
+                        <img src="./templates/imgs/linkedin16.png">
+                      {/if}
+                    </div>
+                    <div class="fli-box">
+                      {if contact.flickr}
+                        <a class="social-link-fli"></a>
+                      {else/}
+                        <img src="./templates/imgs/flickr16.png">
+                      {/if}
+                    </div>
+                  </div>
                 </td> 
               </tr>
             {/foreach}
@@ -33,7 +63,7 @@
    	</div>
 
    	<div class="box-bottom center">
-   		<button type="button" class="search-button" {on click {fn : "searchClicked"}/}><h2>New Search</h2></button>
+   		<button type="button" class="search-button" {on click {fn : "newSearchClicked"}/}><h2>New Search</h2></button>
    	</div>
    </div>
 

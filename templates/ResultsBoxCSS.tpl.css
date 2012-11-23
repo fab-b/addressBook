@@ -46,6 +46,13 @@
       width: 140px;
     }
 
+    .result .social .icons {
+      width: 53px;
+      height: 53px;
+      left: 43px;
+      position: relative;
+    }
+
     table.result {
       border-collapse: collapse;
     }
@@ -93,6 +100,82 @@
     .search-button:hover{
       color:white;
       background-color:#ACAAAA;
+    }
+
+    .social-link-fb {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      cursor: pointer;
+      background-image: url(./templates/imgs/facebook16.png);
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      -moz-transition-property: height;
+      -moz-transition-duration: 0.5s;
+      -webkit-transition-property: height;
+      -webkit-transition-duration: 0.5s;
+      -ms-transition-property: height;
+      -ms-transition-duration: 0.5s;
+      -moz-transition-property: width;
+      -moz-transition-duration: 0.5s;
+      -webkit-transition-property: width;
+      -webkit-transition-duration: 0.5s;
+      -ms-transition-property: width;
+      -ms-transition-duration: 0.5s;
+    }
+
+    .social-link-fb:hover {
+      background-image: url(./templates/imgs/facebook24.png);
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      -moz-transition-property: height;
+      -moz-transition-duration: 0.5s;
+      -webkit-transition-property: height;
+      -webkit-transition-duration: 0.5s;
+      -ms-transition-property: height;
+      -ms-transition-duration: 0.5s;
+      -moz-transition-property: width;
+      -moz-transition-duration: 0.5s;
+      -webkit-transition-property: width;
+      -webkit-transition-duration: 0.5s;
+      -ms-transition-property: width;
+      -ms-transition-duration: 0.5s;
+    }    
+
+    .fb-box {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .tw-box {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .lin-box {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .fli-box {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 24px;
+      height: 24px;
     }
 
   {/macro}

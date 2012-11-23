@@ -86,5 +86,20 @@
       background-color:#63E6F5;
     }
 
+    .search-button.loader {
+      background-image: url(./templates/imgs/loader.gif);
+      background-repeat: no-repeat;
+      background-position-x: 75px;
+      background-position-y: 10px;
+    }
+
+    h2.show {
+      display: block;
+    }
+
+    h2.hide {
+      display: none;
+    }
+
   {/macro}
 {/CSSTemplate}

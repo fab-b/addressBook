@@ -69,7 +69,7 @@ Aria.classDefinition({
             	page : {
             		pageId : "SHOWRESULTS"
             	}
-            })
+            });
         },
 
         _searchMoreWords : function (query) {
@@ -153,6 +153,17 @@ Aria.classDefinition({
         _onDataLoadError : function (cb) {
             // Error loading ext json
             this.$callback(cb);
+        },
+
+        newSearch : function () {
+        	this._data.query = "";
+        	this._data.results = [];
+        	this.$raiseEvent({
+            	name : "navigate",
+            	page : {
+            		pageId : "HOME"
+            	}
+            })
         }
 	}
 });

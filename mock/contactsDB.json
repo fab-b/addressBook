@@ -4,37 +4,49 @@
             "name": "Giorgio",
             "surname": "Chiellini",
             "email": "chiello@example.com",
-            "office": "greenside"
+            "office": "greenside",
+            "facebook": "www.facebook.com",
+            "twitter": "www.twitter.com",
+            "linkedin": "www.linkedin.com"
         },
         {
             "name": "Paul",
             "surname": "Pogba",
             "email": "cleveland@example.com",
-            "office": "greenside"
+            "office": "greenside",
+            "twitter": "www.twitter.com"
         },
         {
             "name": "Arturo",
             "surname": "Vidal",
             "email": "vish@example.com",
-            "office": "templiers"
+            "office": "templiers",
+            "linkedin": "www.linkedin.com"
         },
         {
             "name": "Andrea",
             "surname": "Pirlo",
             "email": "grady@example.com",
-            "office": "main"
+            "office": "main",
+            "facebook": "www.facebook.com",
+            "twitter": "www.twitter.com",
+            "linkedin": "www.linkedin.com"
         },
         {
             "name": "Gigi",
             "surname": "Buffon",
             "email": "dusted@example.com",
-            "office": "main"
+            "office": "main",
+            "facebook": "www.facebook.com",
+            "twitter": "www.twitter.com"
         },
         {
             "name": "Andrea",
             "surname": "Barzagli",
             "email": "barza@example.com",
-            "office": "main"
+            "office": "main",
+            "twitter": "www.twitter.com",
+            "linkedin": "www.linkedin.com"
         }
     ]
 }
