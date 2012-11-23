@@ -30,13 +30,46 @@
 
     .results {
       width: 360px;
-      border: 1px solid #EDEDED;
       margin: 0 60px 0 60px;
       border-radius: 15px;
+      text-align: left;
     }
 
     .results .datas {
       background-color: #EDEDED;
+      width: 200px;
+      padding: 7px 20px;
+    }
+
+    .results .social {
+      background-color: #CCEAEF;
+      width: 140px;
+    }
+
+    table.result {
+      border-collapse: collapse;
+    }
+
+    table.result tr:first-child .datas{
+      border-radius: 15px 0 0 0;
+    }
+
+    table.result tr:first-child .social{
+      border-radius: 0 15px 0 0;
+    }
+
+    table.result tr:last-child .datas{
+      border-radius: 0 0 0 15px;
+    }
+
+    table.result tr:last-child .social{
+      border-radius: 0 0 15px 0;
+    }    
+
+    table.result tr td {
+      font-size: 17px;
+      text-shadow: 1px 1px white;
+      border: 1px solid white;
     }
 
   	.search-button {
