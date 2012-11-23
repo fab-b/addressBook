@@ -15,6 +15,6 @@
             }
         }
     },
-    padeId : "HOME",
+    pageId : "HOME",
     url : "/addressBook/search"
 }
