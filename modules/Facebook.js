@@ -14,6 +14,7 @@ Aria.classDefinition({
 		};		
 	},
 	$destructor : function () {
+		this.json.removeListener(this._data, "profile", this._profileChangeListener);
 		this._profileChangeListener = null;
 		this.$ModuleCtrl.$destructor.call(this);
 	},	
@@ -22,7 +23,7 @@ Aria.classDefinition({
 		
 		init : function (args, cb) {
 			this._data.profile = null;
-			this.json.addListener(this._data, "profile", );
+			this.json.addListener(this._data, "profile", this._profileChangeListener);
 			
 			aria.utils.ScriptLoader.load(["//connect.facebook.net/en_US/all.js"], {
 				fn : this._onFBReady,
@@ -37,10 +38,14 @@ Aria.classDefinition({
 		},
 		
 		_onProfileChange : function (change) {
-			this._fbRequest("/" + change.newValue, {
-				fn : this._onFBResponse,
-				scope : this
-			});
+			this.json.setValue(this._data, "info", null);
+			if (change.newValue) {
+				this.json.setValue(this._data, "loading", true);
+				this._fbRequest(this._buildRequest(change.newValue), {
+					fn : this._onFBResponse,
+					scope : this
+				});
+			}
 		},
 		
 		
@@ -52,7 +57,12 @@ Aria.classDefinition({
 		},
 		
 		_onFBResponse : function (res) {
-			debugger
+			this.json.setValue(this._data, "loading", false);
+			this.json.setValue(this._data, "info", res);
+		},
+
+		_buildRequest : function (value) {
+			return null;
 		}
 		
 	}

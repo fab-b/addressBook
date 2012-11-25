@@ -39,12 +39,58 @@ Aria.classDefinition({
             var query = this._data.query;
 
             this._data.results = [];
-
+            this._searchByMatch(query);
+            /*
             if (query.indexOf(" ") == -1) {
                 this._searchOneWord(query);
             } else {
                 this._searchMoreWords(query);
             }
+            */
+        },
+
+        _searchByMatch : function (query) {
+            var addressBook = this._data.addressBook.addressBook;
+            var query = query.toLowerCase();
+            var tmp = [];
+            var regexp = new RegExp(query), found;
+
+            for(var i=0; i < addressBook.length; i++) {
+                found = false;
+                var contact = addressBook[i];
+                
+                for (var field in contact) {
+                    if ((!aria.utils.Json.isMetadata(field)) && (contact.hasOwnProperty(field))) {
+                        if (contact[field].toLowerCase().match(regexp) !== null) {
+                            found = true;       
+                        }
+                    }
+                }
+                if (found) {
+                    tmp.push(contact);
+                }
+            }
+            tmp.sort(function (a,b) {
+                var first = (a.name + a.surname).toLowerCase();
+                var second = (b.name + b.surname).toLowerCase();
+                if (first < second) {
+                    return -1;
+                }
+                if (first == second) {
+                    return 0;
+                }
+                if (first > second) {
+                    return 1;
+                }
+
+            });
+            this.json.setValue(this._data, "results", tmp);
+            this.$raiseEvent({
+                name : "navigate",
+                page : {
+                    pageId : "SHOWRESULTS"
+                }
+            });
         },
 
         _searchOneWord : function (query) {
@@ -65,10 +111,10 @@ Aria.classDefinition({
             }
             this.json.setValue(this._data, "results", tmp);
             this.$raiseEvent({
-            	name : "navigate",
-            	page : {
-            		pageId : "SHOWRESULTS"
-            	}
+                name : "navigate",
+                page : {
+                    pageId : "SHOWRESULTS"
+                }
             });
         },
 
@@ -164,6 +210,18 @@ Aria.classDefinition({
             		pageId : "HOME"
             	}
             })
+        },
+
+        navigate : function (args) {
+            this.json.setValue(this._data, "selected", args.item);
+            if (args.type == "facebook") {
+                this.$raiseEvent({
+                    name : "navigate",
+                    page : {
+                        pageId : "FACEBOOK"
+                    }
+                });
+            }
         }
 	}
 });

@@ -1,52 +1,46 @@
 {
-    "addressBook" : [
-        {
-            "name": "Giorgio",
-            "surname": "Chiellini",
-            "email": "chiello@example.com",
-            "office": "greenside",
-            "facebook": "www.facebook.com",
-            "twitter": "www.twitter.com",
-            "linkedin": "www.linkedin.com"
-        },
-        {
-            "name": "Paul",
-            "surname": "Pogba",
-            "email": "cleveland@example.com",
-            "office": "greenside",
-            "twitter": "www.twitter.com"
-        },
-        {
-            "name": "Arturo",
-            "surname": "Vidal",
-            "email": "vish@example.com",
-            "office": "templiers",
-            "linkedin": "www.linkedin.com"
-        },
-        {
-            "name": "Andrea",
-            "surname": "Pirlo",
-            "email": "grady@example.com",
+    "addressBook" : [{
+            "name": "Mark",
+            "surname": "Zuckerberg",
+            "email": "mark.zuckerberg@example.com",
             "office": "main",
-            "facebook": "www.facebook.com",
-            "twitter": "www.twitter.com",
-            "linkedin": "www.linkedin.com"
-        },
-        {
-            "name": "Gigi",
-            "surname": "Buffon",
-            "email": "dusted@example.com",
+            "facebook": "zuck"
+        }, {
+            "name": "Britney",
+            "surname": "Spears",
+            "email": "britney.spears@example.com",
             "office": "main",
-            "facebook": "www.facebook.com",
-            "twitter": "www.twitter.com"
-        },
-        {
-            "name": "Andrea",
-            "surname": "Barzagli",
-            "email": "barza@example.com",
+            "facebook": "britneyspears"
+        }, {
+            "name": "Angela",
+            "surname": "Merkel",
+            "email": "angela.merkel@example.com",
             "office": "main",
-            "twitter": "www.twitter.com",
-            "linkedin": "www.linkedin.com"
+            "facebook": "AngelaMerkel"
+        }, {
+            "name": "François",
+            "surname": "Hollande",
+            "email": "francois.hollande@example.com",
+            "office": "main",
+            "facebook": "francoishollande.fr"
+        }, {
+            "name": "Pedro",
+            "surname": "Passos Coelho",
+            "email": "pedro.coelho@example.com",
+            "office": "main",
+            "facebook": "pedropassoscoelho"
+        }, {
+            "name": "Jóhanna",
+            "surname": "Sigurðardóttir",
+            "email": "johannasig@example.com",
+            "office": "main",
+            "facebook": "johannasig"
+        }, {
+            "name": "David",
+            "surname": "Cameron",
+            "email": "david.cameron@example.com",
+            "office": "main",
+            "facebook": "DavidCameron"
         }
     ]
 }

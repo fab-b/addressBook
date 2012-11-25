@@ -6,7 +6,7 @@
 
   {macro main()}
     
-   <div class="content-box">
+   <div class="content-box" {id "contentBox"/}>
    	<div class="box-top center">
    		<h1 class="cian">Address Book</h1>   		
    	</div>
@@ -23,6 +23,18 @@
             scope : this
           }
         }],
+        on : {
+          focus : {
+            fn : hasFocus,
+            scope : this,
+            args : true
+          },
+          blur : {
+            fn : hasFocus,
+            scope : this,
+            args : false
+          }
+        },
         type : "div"
       }/}
    	</div>

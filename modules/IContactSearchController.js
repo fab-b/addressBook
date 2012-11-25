@@ -18,6 +18,7 @@ Aria.interfaceDefinition ({
 		 * Simple search function called when clicking the search button. 
 		 */		
 		searchContact : function () {},
-		newSearch : function () {}
+		newSearch : function () {},
+		navigate : function () {}
 	}
 });

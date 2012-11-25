@@ -1,6 +1,15 @@
 Aria.tplScriptDefinition({
     $classpath : "addressBook.templates.MainLayoutScript",
     $prototype : {
+
+        $dataReady : function () {
+            if (!this.data["view:data"]) {
+                this.data["view:data"] = {
+                    menuOpen : false
+                };
+            }
+        },
+
         $displayReady : function () {
             var splashScreenDiv = aria.utils.Dom.getElementById("splashScreenContainer");
             if (splashScreenDiv) {
@@ -18,6 +27,10 @@ Aria.tplScriptDefinition({
                 }, 400);
             }
 
+        },
+
+        toggleMenu : function () {
+            this.$json.setValue(this.data["view:data"], "menuOpen", !this.data["view:data"].menuOpen);
         }
 
     }

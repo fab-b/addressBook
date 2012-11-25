@@ -33,6 +33,9 @@
   		-webkit-box-shadow: 1px 1px 10px #333;	
   		box-shadow: 1px 1px 10px #333;
   	}
+    .content-box.opaque {
+      opacity: 1;
+    }
 
   	.content-box .box-top {
   		height: 70px;

@@ -42,6 +42,18 @@ Aria.tplScriptDefinition({
 
         _wait : function () {
             this.moduleCtrl.searchContact();
+        },
+
+        hasFocus : function (evt, arg) {
+            var boxClassList = this.$getElementById("contentBox").classList;
+            if (arg === true && !boxClassList.contains("opaque")) {
+                boxClassList.add("opaque");
+                return true;
+            }
+            if (arg === false && boxClassList.contains("opaque")) {
+                boxClassList.remove("opaque");
+                return true;
+            }
         }
     }
 });
