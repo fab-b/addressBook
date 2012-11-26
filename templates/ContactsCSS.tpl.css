@@ -24,7 +24,7 @@
     .result .social .icons {
       width: 37px;
       height: 37px;
-      left: 20px;
+      left: 40px;
       position: relative;
     }
 
@@ -58,12 +58,8 @@
       position: absolute;
       bottom: 0px;
       right: 0px;
-      cursor: pointer;
-      background-image: url(./templates/imgs/facebook16.png);
-      background-repeat: no-repeat;
-      width: 16px;
-      height: 16px;
-      display: inline-block;
+      width: 24px;
+      height: 24px;
 /*      -moz-transition-property: height;
       -moz-transition-duration: 0.5s;
       -webkit-transition-property: height;
@@ -97,6 +93,13 @@
       -ms-transition-property: width;
       -ms-transition-duration: 0.5s;*/
     }    
+
+    .facebook-icon {
+      background-image: url(./templates/imgs/facebook24.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      cursor: pointer;
+    }
 
     .fb-box {
       position: absolute;
