@@ -43,5 +43,6 @@
         }
     },
     pageId : "FACEBOOK",
-    url : "/addressBook/facebook"
+    url : "/addressBook/facebook",
+	title : "Address Book | Facebook"
 }

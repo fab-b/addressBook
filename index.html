@@ -25,10 +25,33 @@
     #splashScreenContainer.invisible {
       opacity : 0;
     }
+	#splashScreenContainer span#splashScreen {
+		position : absolute;
+		top : 50%;
+		left : 43%;
+		height: 67px;
+		width: 300px;
+		color: #53CEDC;
+		font-size: 35px;
+		font-weight: bold;
+		font-family: helvetica;
+		text-transform: uppercase;
+	}
+	#splashScreenContainer span#splashScreenDots {
+		position : absolute;
+		top : 50%;
+		left : 50%;
+		background: url(./templates/imgs/loader.gif) no-repeat scroll center center transparent;
+		margin-left: -77px;
+		margin-top: 100px;
+		height: 30px;
+		width: 155px;
+	}
   </style>
+  <title>Address Book | Search</title>
 </head>
 <body style="background-color: #c1c1c1">
-  <div id="splashScreenContainer"></div>
+  <div id="splashScreenContainer"><span id="splashScreen">Address book</span><span id="splashScreenDots"></span></div>
   <div id="portal-container"></div>
 
   <!-- load the framework entry point -->

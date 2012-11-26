@@ -16,5 +16,6 @@
         }
     },
     pageId : "SHOWRESULTS",
-    url : "/addressBook/results"
+    url : "/addressBook/results",
+	title : "Address Book | Results"
 }
