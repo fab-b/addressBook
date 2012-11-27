@@ -209,7 +209,7 @@ Aria.classDefinition({
             	page : {
             		pageId : "HOME"
             	}
-            })
+            });
         },
 
         navigate : function (args) {

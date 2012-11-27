@@ -4,13 +4,13 @@
         navigation : {
             main_menu : [{
                 title : "Search",
-                pageId : "HOME",
+                pageId : "HOME"
             }, {
                 title : "Results",
-                pageId : "SHOWRESULTS",
+                pageId : "SHOWRESULTS"
             }, {
                 title : "Facebook",
-                pageId : "FACEBOOK",
+                pageId : "FACEBOOK"
             }]
         }
     },
